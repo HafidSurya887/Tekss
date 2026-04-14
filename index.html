@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dugem Running Text</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            overflow: hidden; /* Biar ga ada scrollbar */
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .marquee-container {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .text-jalan {
+            display: inline-block;
+            font-size: 20vw; /* Ukuran teks super gede */
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            animation: jalan 10s linear infinite, kelap-kelip 0.5s linear infinite;
+        }
+
+        /* Animasi Gerak Kiri ke Kanan */
+        @keyframes jalan {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Animasi Warna-Warni Dugem */
+        @keyframes kelap-kelip {
+            0% { color: #ff0000; text-shadow: 0 0 20px #ff0000; }
+            25% { color: #00ff00; text-shadow: 0 0 20px #00ff00; }
+            50% { color: #0000ff; text-shadow: 0 0 20px #0000ff; }
+            75% { color: #ffff00; text-shadow: 0 0 20px #ffff00; }
+            100% { color: #ff00ff; text-shadow: 0 0 20px #ff00ff; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <div class="text-jalan">GAS TERUS JANGAN KASIH KENDOR! 🔥</div>
+    </div>
+
+</body>
+</html>
