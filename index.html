@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Purple Scroller</title>
+    <title>Running Text Deep Purple</title>
     <style>
         body {
-            background-color: #000; /* Hitam pekat */
+            background-color: #000; /* Hitam */
             margin: 0;
-            padding: 0;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -19,26 +18,17 @@
         .marquee-container {
             width: 100%;
             white-space: nowrap;
-            vertical-align: middle;
         }
 
         .text-jalan {
             display: inline-block;
-            font-size: 25vw; /* Ukuran maksimal */
-            font-weight: 900;
-            
-            /* Warna Ungu Tua & Efek Neon */
-            color: #7B00FF; 
-            text-shadow: 
-                0 0 10px #4B0082,
-                0 0 20px #4B0082,
-                0 0 40px #7B00FF,
-                0 0 80px #7B00FF;
-
-            animation: jalan 8s linear infinite;
+            font-size: 22vw; 
+            font-weight: bold;
+            /* Warna Ungu Tua Solid */
+            color: #4B0082; 
+            animation: jalan 12s linear infinite;
         }
 
-        /* Animasi Gerak */
         @keyframes jalan {
             from { transform: translateX(100%); }
             to { transform: translateX(-100%); }
@@ -48,7 +38,7 @@
 <body>
 
     <div class="marquee-container">
-        <div class="text-jalan">ENJOY THE NIGHT</div>
+        <div class="text-jalan">(YANG AVI DAPET CUMA KATA SINGKAT, YANG LAIN DAPET CERITA LENGKAP) FROM:ORANG GILUY</div>
     </div>
 
 </body>
