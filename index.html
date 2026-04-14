@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dugem Running Text</title>
+    <title>Deep Purple Scroller</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #000; /* Hitam pekat */
             margin: 0;
-            overflow: hidden; /* Biar ga ada scrollbar */
+            padding: 0;
+            overflow: hidden;
             display: flex;
             align-items: center;
             height: 100vh;
@@ -18,38 +19,36 @@
         .marquee-container {
             width: 100%;
             white-space: nowrap;
-            overflow: hidden;
+            vertical-align: middle;
         }
 
         .text-jalan {
             display: inline-block;
-            font-size: 20vw; /* Ukuran teks super gede */
-            font-weight: bold;
-            color: #fff;
-            text-transform: uppercase;
-            animation: jalan 10s linear infinite, kelap-kelip 0.5s linear infinite;
+            font-size: 25vw; /* Ukuran maksimal */
+            font-weight: 900;
+            
+            /* Warna Ungu Tua & Efek Neon */
+            color: #7B00FF; 
+            text-shadow: 
+                0 0 10px #4B0082,
+                0 0 20px #4B0082,
+                0 0 40px #7B00FF,
+                0 0 80px #7B00FF;
+
+            animation: jalan 8s linear infinite;
         }
 
-        /* Animasi Gerak Kiri ke Kanan */
+        /* Animasi Gerak */
         @keyframes jalan {
             from { transform: translateX(100%); }
             to { transform: translateX(-100%); }
-        }
-
-        /* Animasi Warna-Warni Dugem */
-        @keyframes kelap-kelip {
-            0% { color: #ff0000; text-shadow: 0 0 20px #ff0000; }
-            25% { color: #00ff00; text-shadow: 0 0 20px #00ff00; }
-            50% { color: #0000ff; text-shadow: 0 0 20px #0000ff; }
-            75% { color: #ffff00; text-shadow: 0 0 20px #ffff00; }
-            100% { color: #ff00ff; text-shadow: 0 0 20px #ff00ff; }
         }
     </style>
 </head>
 <body>
 
     <div class="marquee-container">
-        <div class="text-jalan">GAS TERUS JANGAN KASIH KENDOR! 🔥</div>
+        <div class="text-jalan">ENJOY THE NIGHT</div>
     </div>
 
 </body>
